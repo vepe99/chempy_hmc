@@ -1,0 +1,32 @@
+elements ['C', 'Fe', 'He', 'Mg', 'N', 'Ne', 'O', 'Si'] -> indices [0, 1, 3, 4, 5, 6, 7, 8] (of ['C', 'Fe', 'H', 'He', 'Mg', 'N', 'Ne', 'O', 'Si'])
+train points: 458472   test points: 45771
+network shape: 7 -> 40 -> 8 (per element)
+  [1/8]   C: iters=  59  test MSE(std)=1.1696e-03
+  [2/8]  Fe: iters= 117  test MSE(std)=2.0602e-03
+  [3/8]  He: iters=  50  test MSE(std)=1.2984e-03
+  [4/8]  Mg: iters=  95  test MSE(std)=4.9195e-04
+  [5/8]   N: iters=  74  test MSE(std)=7.1480e-04
+  [6/8]  Ne: iters=  60  test MSE(std)=4.0259e-04
+  [7/8]   O: iters=  91  test MSE(std)=5.6044e-04
+  [8/8]  Si: iters= 101  test MSE(std)=1.1356e-03
+trained 8 nets in 641.1s
+
+--- test-set L1 error [dex] per element (median / mean / 99pct) ---
+    C: median=0.0063  mean=0.0093  99pct=0.0534
+   Fe: median=0.0092  mean=0.0147  99pct=0.0854
+   He: median=0.0077  mean=0.0122  99pct=0.0699
+   Mg: median=0.0042  mean=0.0063  99pct=0.0364
+    N: median=0.0043  mean=0.0064  99pct=0.0358
+   Ne: median=0.0039  mean=0.0059  99pct=0.0362
+    O: median=0.0047  mean=0.0069  99pct=0.0389
+   Si: median=0.0038  mean=0.0057  99pct=0.0299
+  ALL: median=0.0051  mean=0.0084
+  APE physical: median=1.620%  mean=16.367%
+
+--- standardization vs authors' TNG_Network_Weights.npz ---
+   in_mean: max|ours-theirs| = 0.00e+00
+    in_std: max|ours-theirs| = 0.00e+00
+  out_mean: max|ours-theirs| = 0.00e+00
+   out_std: max|ours-theirs| = 0.00e+00
+
+saved -> /export/data/vgiusepp/chempy_hmc/hmc_numpyro/paper_net/weights_paper.npz

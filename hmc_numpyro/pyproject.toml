@@ -12,6 +12,7 @@ dependencies = [
     "jax[cuda12]>=0.4.34",
     "numpyro>=0.15",
     "torch",  # CPU is fine; only used once to read the state_dict
+    "scikit-learn>=1.7.2",
 ]
 
 [tool.uv]
