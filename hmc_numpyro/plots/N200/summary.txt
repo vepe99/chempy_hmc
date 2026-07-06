@@ -1,0 +1,13 @@
+N_stars = 200
+total draws = 4000 (4 chains x 1000)
+divergences = 0  (0.00%)
+BFMI per chain = [1.038 1.436 0.709 2.007]  (healthy if > 0.3)
+
+Lambda summary (r_hat healthy < 1.01; ESS healthy > 400):
+            mean     sd  hdi_2.5%  hdi_97.5%  mcse_mean  mcse_sd  ess_bulk  ess_tail  r_hat
+Lambda[0] -2.263  0.007    -2.276     -2.251      0.001    0.001      40.0      90.0   1.10
+Lambda[1] -2.875  0.008    -2.891     -2.860      0.003    0.001      11.0      47.0   1.32
+
+Lambda percentiles [2.5, 16, 50, 84, 97.5]:
+  alpha_IMF : [-2.276  -2.2703 -2.2622 -2.256  -2.2508]
+  log10N_Ia : [-2.8918 -2.883  -2.8737 -2.8669 -2.8605]

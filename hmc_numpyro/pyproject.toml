@@ -1,0 +1,28 @@
+[project]
+name = "chempy-hmc-numpyro"
+version = "0.1.0"
+description = "Hierarchical multi-star Chempy inference (arXiv:1909.00812) with a PyTorch emulator and NumPyro NUTS on GPU"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "numpy<2.0",
+    "scipy",
+    "matplotlib",
+    "arviz",
+    "autocvd>=0.2.1",
+    "jax[cuda12]>=0.4.34",
+    "numpyro>=0.15",
+    "torch",  # CPU is fine; only used once to read the state_dict
+]
+
+[tool.uv]
+# Read torch from the CPU index to avoid pulling a second, conflicting CUDA stack
+# (JAX brings its own CUDA wheels).
+override-dependencies = []
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }

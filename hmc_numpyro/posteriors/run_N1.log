@@ -1,0 +1,11 @@
+[N=1] devices: [CudaDevice(id=0)] (CUDA_VISIBLE_DEVICES=7)
+[N=1] parameterization: non-centered, chain_method=vectorized
+  0%|          | 0/3000 [00:00<?, ?it/s]warmup:   5%|▌         | 150/3000 [00:10<03:26, 13.78it/s]warmup:  10%|█         | 300/3000 [00:12<01:38, 27.38it/s]warmup:  15%|█▌        | 450/3000 [00:13<00:58, 43.54it/s]warmup:  20%|██        | 600/3000 [00:14<00:41, 58.37it/s]warmup:  25%|██▌       | 750/3000 [00:15<00:29, 76.17it/s]warmup:  30%|███       | 900/3000 [00:16<00:23, 89.07it/s]warmup:  35%|███▌      | 1050/3000 [00:17<00:18, 103.20it/s]warmup:  40%|████      | 1200/3000 [00:18<00:14, 120.81it/s]warmup:  45%|████▌     | 1350/3000 [00:19<00:12, 135.33it/s]warmup:  50%|█████     | 1500/3000 [00:20<00:10, 148.06it/s]warmup:  55%|█████▌    | 1650/3000 [00:21<00:08, 158.83it/s]warmup:  60%|██████    | 1800/3000 [00:21<00:07, 163.32it/s]warmup:  65%|██████▌   | 1950/3000 [00:22<00:06, 169.84it/s]sample:  70%|███████   | 2100/3000 [00:23<00:05, 156.24it/s]sample:  75%|███████▌  | 2250/3000 [00:24<00:04, 159.30it/s]sample:  80%|████████  | 2400/3000 [00:25<00:03, 159.30it/s]sample:  85%|████████▌ | 2550/3000 [00:26<00:02, 157.12it/s]sample:  90%|█████████ | 2700/3000 [00:27<00:01, 158.86it/s]sample:  95%|█████████▌| 2850/3000 [00:28<00:00, 162.13it/s]sample: 100%|██████████| 3000/3000 [00:29<00:00, 161.56it/s]sample: 100%|██████████| 3000/3000 [00:29<00:00, 102.04it/s]
+[N=1] sampling finished in 40.9s
+[N=1] divergences: 0
+            mean     sd  hdi_3%  hdi_97%  ...  mcse_sd  ess_bulk  ess_tail  r_hat
+Lambda[0] -2.057  0.121  -2.276   -1.823  ...    0.002    2831.0    2696.0    1.0
+Lambda[1] -2.858  0.158  -3.161   -2.584  ...    0.004    2268.0    2129.0    1.0
+
+[2 rows x 9 columns]
+[N=1] saved -> /export/data/vgiusepp/chempy_hmc/hmc_numpyro/posteriors/posterior_N1.nc , /export/data/vgiusepp/chempy_hmc/hmc_numpyro/posteriors/posterior_N1.npz

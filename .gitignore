@@ -1,0 +1,12 @@
+# Python environment / caches
+.venv/
+__pycache__/
+*.pyc
+
+# External reference repositories (separately cloned; not our work)
+/references/
+
+# Full-dimensional N=200 posterior chains are large (100s of MB) and regenerable.
+# The global-parameter posteriors (Lambda) are committed as .npz, and all
+# diagnostics/plots are committed, so the findings are fully preserved.
+**/posterior_N200.nc
