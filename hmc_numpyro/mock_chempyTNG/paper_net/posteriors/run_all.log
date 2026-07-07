@@ -1,0 +1,6 @@
+launching: /export/data/vgiusepp/chempy_hmc/hmc_numpyro/.venv/bin/python /export/data/vgiusepp/chempy_hmc/hmc_numpyro/mock_chempyTNG/paper_net/run_hmc_paper.py --n_stars 1 --draws 1000 --tune 1000 --chains 4 --target_accept 0.9 --advi_init
+launching: /export/data/vgiusepp/chempy_hmc/hmc_numpyro/.venv/bin/python /export/data/vgiusepp/chempy_hmc/hmc_numpyro/mock_chempyTNG/paper_net/run_hmc_paper.py --n_stars 10 --draws 1000 --tune 1000 --chains 4 --target_accept 0.9 --advi_init
+launching: /export/data/vgiusepp/chempy_hmc/hmc_numpyro/.venv/bin/python /export/data/vgiusepp/chempy_hmc/hmc_numpyro/mock_chempyTNG/paper_net/run_hmc_paper.py --n_stars 200 --draws 1000 --tune 1000 --chains 4 --target_accept 0.9 --advi_init
+N=1 exited with code 0
+N=10 exited with code 0
+N=200 exited with code 0

@@ -1,0 +1,6 @@
+launching: /export/data/vgiusepp/chempy_hmc/hmc_numpyro/.venv/bin/python /export/data/vgiusepp/chempy_hmc/hmc_numpyro/alt_yields/parent/run_hmc.py --n_stars 1
+launching: /export/data/vgiusepp/chempy_hmc/hmc_numpyro/.venv/bin/python /export/data/vgiusepp/chempy_hmc/hmc_numpyro/alt_yields/parent/run_hmc.py --n_stars 10
+launching: /export/data/vgiusepp/chempy_hmc/hmc_numpyro/.venv/bin/python /export/data/vgiusepp/chempy_hmc/hmc_numpyro/alt_yields/parent/run_hmc.py --n_stars 200
+N=1: OK  (log: posteriors/run_N1.log)
+N=10: OK  (log: posteriors/run_N10.log)
+N=200: OK  (log: posteriors/run_N200.log)
