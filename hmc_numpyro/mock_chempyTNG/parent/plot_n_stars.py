@@ -1,7 +1,12 @@
 """Reproduce the n_stars_plot from 04_plot_multistar_inference.ipynb, but for the
 HMC posteriors: global params (alpha_IMF, log10 N_Ia) median +/- 1sigma/2sigma
 as a function of N_stars, with the ground-truth reference line.
+
+By default every N loads from the base posteriors/ dir. Pass --n200_tag <sub> to
+pull the N=200 posterior from posteriors/<sub>/ instead (e.g. --n200_tag centered
+to use the centered-parameterization re-run rather than the base N=200).
 """
+import argparse
 import os
 import numpy as np
 import matplotlib
@@ -13,16 +18,24 @@ import config
 PARAM_NAMES = [r"$\alpha_{\rm IMF}$", r"$\log_{10} N_{\rm Ia}$"]
 
 
-def load_lambda(n):
-    npz = os.path.join(config.POSTERIOR_DIR, f"posterior_N{n}.npz")
+def load_lambda(n, tag=""):
+    base = os.path.join(config.POSTERIOR_DIR, tag) if tag else config.POSTERIOR_DIR
+    npz = os.path.join(base, f"posterior_N{n}.npz")
     return np.load(npz)["Lambda"]  # (nsamples, 2)
 
 
 def main():
+    p = argparse.ArgumentParser()
+    p.add_argument("--n200_tag", default="",
+                   help="subdir under posteriors/ to load N=200 from (e.g. 'centered'); "
+                        "N=1,10 always load from the base posteriors/ dir")
+    args = p.parse_args()
+
     ns = config.N_STARS_LIST
     pcts = {}
     for n in ns:
-        lam = load_lambda(n)
+        tag = args.n200_tag if n == 200 else ""
+        lam = load_lambda(n, tag)
         pcts[n] = np.percentile(lam, [2.275, 15.865, 50.0, 84.135, 97.725], axis=0)
     lo2 = np.array([pcts[n][0] for n in ns])
     lo1 = np.array([pcts[n][1] for n in ns])
